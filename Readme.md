@@ -9,7 +9,7 @@
 The following guides illustrate how to use some features concretely:
 
 1) Clone the Repository:
-git clone <repository-url>
+git clone https://github.com/vijeth123/scrum.git
 
 
 2) Build the Project:
@@ -24,10 +24,10 @@ java -jar target/spring-boot-retrospective-management.jar
    POST http://localhost:8080/retrospectives
 
     * Add feedback items to a retrospective:
-   POST http://localhost:8080/retrospectives/{retrospectiveId}/feedback
+   POST http://localhost:8080/retrospectives/{retrospectiveName}/feedback
 
     * Update feedback items: 
-   PUT http://localhost:8080/retrospectives/{retrospectiveId}/feedback/{feedbackItemId}
+   PUT http://localhost:8080/retrospectives/{retrospectiveName}/feedback/{feedbackItemName}
    
     * Search retrospectives by date:
    GET http://localhost:8080/retrospectives/search?date=YYYY-MM-DD
