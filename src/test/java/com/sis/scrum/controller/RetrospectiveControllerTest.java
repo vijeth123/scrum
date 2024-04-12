@@ -14,6 +14,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDate;
 import java.util.Collections;
+import java.util.List;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -36,8 +37,9 @@ public class RetrospectiveControllerTest {
     public void testCreateRetrospective() throws Exception {
         Retrospective retrospective = new Retrospective();
         retrospective.setName("Retrospective 1");
-        retrospective.setDate(LocalDate.now());
-        retrospective.setParticipants(Collections.singletonList("John Doe"));
+        retrospective.setSummary("Post release retrospective");
+        retrospective.setDate(LocalDate.of(2022, 7, 27));
+        retrospective.setParticipants(List.of("Viktor", "Gareth", "Mike"));
 
         mockMvc.perform(post("/retrospectives")
                         .contentType("application/json")
