@@ -22,6 +22,7 @@ java -jar target/spring-boot-retrospective-management.jar
 4) Access the API Endpoints:
     * Create a new retrospective:
    POST http://localhost:8080/retrospectives
+
    Example request body:   
    {
       "name": "Retrospective 1",
@@ -37,7 +38,9 @@ java -jar target/spring-boot-retrospective-management.jar
 
     * Add feedback items to a retrospective:
    POST http://localhost:8080/retrospectives/{retrospectiveName}/feedback
+
    Example request URL: http://localhost:8080/retrospectives/Retrospective 1/feedback
+
    Example request body:
    {
       "name": "Gareth",
@@ -48,7 +51,9 @@ java -jar target/spring-boot-retrospective-management.jar
 
     * Update feedback items: 
    PUT http://localhost:8080/retrospectives/{retrospectiveName}/feedback/{feedbackItemName}
+
    Example request URL: http://localhost:8080/retrospectives/Retrospective 1/feedback/Gareth
+
    Example request body:
    {
    "name": "Gareth",
